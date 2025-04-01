@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Background -->
+  <rect width="64" height="64" rx="12" fill="white"/>
+  
+  <!-- Stylish TM letters -->
+  <g transform="translate(8, 12)">
+    <!-- T -->
+    <path d="M0 8h16v6H22v-6h16v-8H0z" fill="black"/>
+    
+    <!-- M -->
+    <path d="M0 40V16h10l6 10 6-10h10v24h-8V24l-8 13-8-13v16z" fill="black"/>
+  </g>
+  
+  <!-- Decorative elements -->
+  <rect x="4" y="4" width="56" height="56" rx="10" stroke="black" stroke-width="2" fill="none"/>
+  
+  <!-- Tech circuit accent -->
+  <circle cx="52" cy="12" r="3" fill="black"/>
+  <circle cx="52" cy="52" r="3" fill="black"/>
+  <path d="M52 12v40" stroke="black" stroke-width="1.5" stroke-dasharray="2 2" fill="none"/>
+</svg> 

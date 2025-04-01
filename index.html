@@ -1,0 +1,2509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Tech Mafia - Latest Tech News, Reviews & Guides</title>
+    <meta name="title" content="Tech Mafia - Latest Tech News, Reviews & Guides">
+    <meta name="description" content="Your trusted source for the latest technology news, reviews, and in-depth guides on gadgets, mobiles, laptops, wearables, and emerging tech trends.">
+    <meta name="keywords" content="tech news, gadget reviews, smartphone reviews, laptop reviews, wearable tech, AI news, tech guides, technology blog">
+    <meta name="author" content="Tech Mafia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.techmafia.com">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techmafia.com">
+    <meta property="og:title" content="Tech Mafia - Latest Tech News, Reviews & Guides">
+    <meta property="og:description" content="Your trusted source for the latest technology news, reviews, and in-depth guides on gadgets, mobiles, laptops, wearables, and emerging tech trends.">
+    <meta property="og:image" content="https://www.techmafia.com/og-image.jpg">
+    
+    <!-- X (formerly Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.techmafia.com">
+    <meta name="twitter:title" content="Tech Mafia - Latest Tech News, Reviews & Guides">
+    <meta name="twitter:description" content="Your trusted source for the latest technology news, reviews, and in-depth guides on gadgets, mobiles, laptops, wearables, and emerging tech trends.">
+    <meta name="twitter:image" content="https://www.techmafia.com/twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #6c757d;
+            --dark-color: #0070f3;
+            --light-color: #f8f9fa;
+            --accent-color: #ff5722;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        .container-custom {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #333333;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        /* Navigation link hover effects */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        /* Mobile menu styles */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: white;
+            z-index: 100;
+            padding: 1rem;
+            overflow-y: auto;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+            .hero-section p {
+                font-size: 1rem;
+            }
+            .card-title {
+                font-size: 1.1rem;
+            }
+            .card-text {
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Improved tab content display for mobile */
+        @media (max-width: 640px) {
+            .tab-content {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+            }
+            .category-tabs {
+                overflow-x: auto;
+                white-space: nowrap;
+                -webkit-overflow-scrolling: touch;
+                padding-bottom: 0.5rem;
+            }
+        }
+        
+        /* Tech icons animations */
+        @keyframes scrollLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+        
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-2px) rotate(-1deg);
+            }
+            75% {
+                transform: translateX(2px) rotate(1deg);
+            }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) scale(1.1);
+                filter: drop-shadow(0 10px 8px rgba(0, 0, 0, 0.2));
+            }
+            50% {
+                transform: translateY(-10px) scale(1.2);
+                filter: drop-shadow(0 20px 12px rgba(0, 0, 0, 0.15));
+            }
+        }
+        
+        .tech-icons-container {
+            display: flex;
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 40px; /* Increased height to prevent vertical overlap */
+        }
+        
+        .tech-icons-row {
+            display: flex;
+            animation: scrollLeftToRight 25s linear infinite;
+            padding: 0 1rem;
+            position: absolute;
+            height: 100%;
+            align-items: center;
+            width: max-content; /* Ensure the row takes the full width of its content */
+        }
+        
+        .dancing-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 2.5rem; /* Increased margin for more separation */
+            animation: shake 3s ease-in-out infinite;
+            height: 28px; /* Increased height for icons */
+            width: 28px; /* Fixed width for icons */
+            position: relative; /* Enable positioning context */
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+        
+        .dancing-icon:hover {
+            animation: float 1.5s ease-in-out infinite !important;
+            z-index: 10;
+        }
+        
+        .dancing-icon svg {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .dancing-icon:hover svg {
+            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+        }
+        
+        /* Wobble animation for tech icons */
+        @keyframes wobble {
+            0%, 100% {
+                transform: translateX(0%);
+            }
+            15% {
+                transform: translateX(-5%) rotate(-5deg);
+            }
+            30% {
+                transform: translateX(4%) rotate(3deg);
+            }
+            45% {
+                transform: translateX(-3%) rotate(-3deg);
+            }
+            60% {
+                transform: translateX(2%) rotate(2deg);
+            }
+            75% {
+                transform: translateX(-1%) rotate(-1deg);
+            }
+        }
+        
+        .tech-icons-container svg {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-icons-container svg:hover {
+            animation: wobble 1s ease-in-out;
+        }
+        
+        /* Fix for header layout */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background-color: white;
+        }
+        
+        /* Adjust spacing for category tabs to prevent overlap */
+        .category-tabs {
+            margin-top: 110px; /* Adjusted to account for header and icon ribbon */
+            position: relative;
+            z-index: 40;
+        }
+        
+        /* Make sure the tech icons banner is visible in all tabs */
+        .tab-content {
+            margin-top: 40px; /* Reduced to account for the new category-tabs margin */
+        }
+        
+        /* Add after the existing tech icon styles: */
+        
+        .tech-icons-container svg:hover {
+            animation: wobble 1s ease-in-out;
+        }
+        
+        /* Mobile tech icons styles */
+        .mobile-tech-icons {
+            position: relative;
+        }
+        
+        .mobile-icon {
+            margin: 0 0.5rem;
+            transform-origin: center;
+            cursor: pointer;
+        }
+        
+        .mobile-icon svg {
+            width: 28px;
+            height: 28px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-icon:hover svg {
+            transform: scale(1.3);
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+        
+        /* Special animation for mobile icons */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+        
+        .mobile-icon:active svg {
+            animation: pulse 0.3s ease-in-out;
+            transform: scale(0.9);
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container-custom py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-primary flex items-center">
+                    <img src="favicon.svg" alt="Tech Mafia Logo" class="w-8 h-8 mr-2" />
+                    Tech Mafia
+                    <div class="ml-4 hidden sm:flex items-center space-x-3">
+                        <!-- Laptop Icon with animation -->
+                        <div class="icon-container transform hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 hover:text-blue-800">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                            </svg>
+                        </div>
+                        
+                        <!-- Watch/Smartwatch Icon with animation -->
+                        <div class="icon-container transform hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600 hover:text-green-800">
+                                <circle cx="12" cy="12" r="7"></circle>
+                                <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                            </svg>
+                        </div>
+                        
+                        <!-- Mobile Phone Icon with animation -->
+                        <div class="icon-container transform hover:scale-110 transition-transform duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600 hover:text-red-800">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li>
+                            <a href="#all" class="font-medium nav-link tab-link flex items-center" data-tab="all">
+                                <span>Home</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-gray-600">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#gadgets" class="font-medium nav-link tab-link flex items-center" data-tab="gadgets">
+                                <span>Gadgets</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-purple-600">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                    <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobiles" class="font-medium nav-link tab-link flex items-center" data-tab="mobiles">
+                                <span>Mobiles</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-red-600">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                    <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#laptops" class="font-medium nav-link tab-link flex items-center" data-tab="laptops">
+                                <span>Laptops</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-blue-600">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                    <line x1="2" y1="20" x2="22" y2="20"></line>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#wearables" class="font-medium nav-link tab-link flex items-center" data-tab="wearables">
+                                <span>Wearables</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-green-600">
+                                    <circle cx="12" cy="12" r="7"></circle>
+                                    <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#news" class="font-medium nav-link tab-link flex items-center" data-tab="news">
+                                <span>News</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-amber-600">
+                                    <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                    <path d="M18 14h-8"></path>
+                                    <path d="M15 18h-5"></path>
+                                    <path d="M10 6h8v4h-8V6Z"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden menu-toggle" aria-label="Toggle menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-primary hidden md:block">Subscribe</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Tech Icons Banner -->
+        <div class="hidden lg:block bg-gray-100 py-3 overflow-hidden relative border-t border-b border-gray-200">
+            <div class="tech-icons-container">
+                <!-- First row of tech icons -->
+                <div class="tech-icons-row">
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="2" y1="20" x2="22" y2="20"></line>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+                            <circle cx="12" cy="12" r="7"></circle>
+                            <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                            <polyline points="2 17 12 22 22 17"></polyline>
+                            <polyline points="2 12 12 17 22 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                            <line x1="6" y1="1" x2="6" y2="4"></line>
+                            <line x1="10" y1="1" x2="10" y2="4"></line>
+                            <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-600">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect>
+                            <polyline points="17 2 12 7 7 2"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-600">
+                            <path d="M12 2a10 10 0 1 0 10 10H12V2z"></path>
+                            <path d="M21.18 8.02A10 10 0 0 0 12 2v10h10c0-1.04-.18-2.05-.5-3"></path>
+                            <path d="M15.6 15.6A6 6 0 1 0 12 12v3.6l3.6 0z"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                            <rect x="9" y="9" width="6" height="6"></rect>
+                            <line x1="9" y1="2" x2="9" y2="4"></line>
+                            <line x1="15" y1="2" x2="15" y2="4"></line>
+                            <line x1="9" y1="20" x2="9" y2="22"></line>
+                            <line x1="15" y1="20" x2="15" y2="22"></line>
+                            <line x1="20" y1="9" x2="22" y2="9"></line>
+                            <line x1="20" y1="14" x2="22" y2="14"></line>
+                            <line x1="2" y1="9" x2="4" y2="9"></line>
+                            <line x1="2" y1="14" x2="4" y2="14"></line>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-cyan-600">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600">
+                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                            <path d="M18 14h-8"></path>
+                            <path d="M15 18h-5"></path>
+                            <path d="M10 6h8v4h-8V6Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                
+                <!-- Second row of tech icons -->
+                <div class="tech-icons-row">
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-orange-600">
+                            <path d="M12 12m-10 0a10 10 0 1 0 20 0a10 10 0 1 0 -20 0"></path>
+                            <path d="M12 6v6l4 2"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-amber-600">
+                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                            <path d="M18 14h-8"></path>
+                            <path d="M15 18h-5"></path>
+                            <path d="M10 6h8v4h-8V6Z"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-600">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-600">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-indigo-600">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <div class="dancing-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="14.31" y1="8" x2="20.05" y2="17.94"></line>
+                            <line x1="9.69" y1="8" x2="21.17" y2="8"></line>
+                            <line x1="7.38" y1="12" x2="13.12" y2="2.06"></line>
+                            <line x1="9.69" y1="16" x2="3.95" y2="6.06"></line>
+                            <line x1="14.31" y1="16" x2="2.83" y2="16"></line>
+                            <line x1="16.62" y1="12" x2="10.88" y2="21.94"></line>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="flex justify-between items-center mb-4">
+            <a href="index.html" class="text-2xl font-bold text-primary">
+                Tech Mafia
+            </a>
+            <button class="menu-close" aria-label="Close menu">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Mobile Tech Icons -->
+        <div class="mobile-tech-icons py-3 mb-4 overflow-hidden relative border-t border-b border-gray-200 bg-gray-50 rounded-lg">
+            <div class="flex justify-center space-x-4 py-2">
+                <div class="dancing-icon mobile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600">
+                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                        <line x1="2" y1="20" x2="22" y2="20"></line>
+                    </svg>
+                </div>
+                <div class="dancing-icon mobile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-600">
+                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                        <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                    </svg>
+                </div>
+                <div class="dancing-icon mobile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-green-600">
+                        <circle cx="12" cy="12" r="7"></circle>
+                        <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                    </svg>
+                </div>
+                <div class="dancing-icon mobile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-600">
+                        <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                        <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                    </svg>
+                </div>
+                <div class="dancing-icon mobile-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-yellow-600">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <line x1="12" y1="8" x2="12" y2="12"></line>
+                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="space-y-4">
+                <li>
+                    <a href="#all" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="all">
+                        <span>Home</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-gray-600">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#gadgets" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="gadgets">
+                        <span>Gadgets</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-purple-600">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#mobiles" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="mobiles">
+                        <span>Mobiles</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-red-600">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#laptops" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="laptops">
+                        <span>Laptops</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-blue-600">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="2" y1="20" x2="22" y2="20"></line>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#wearables" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="wearables">
+                        <span>Wearables</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-green-600">
+                            <circle cx="12" cy="12" r="7"></circle>
+                            <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#news" class="block text-lg font-medium py-2 tab-link flex items-center" data-tab="news">
+                        <span>News</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 text-amber-600">
+                            <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                            <path d="M18 14h-8"></path>
+                            <path d="M15 18h-5"></path>
+                            <path d="M10 6h8v4h-8V6Z"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="mt-6">
+            <button class="btn btn-primary w-full">Subscribe</button>
+        </div>
+    </div>
+
+    <main class="min-h-screen pt-16">
+        <div class="container-custom py-8">
+            <!-- Category Tabs Navigation -->
+            <div class="mb-8 border-b border-gray-200 category-tabs overflow-x-auto bg-white shadow-sm rounded-lg">
+                <ul class="flex flex-wrap -mb-px text-sm font-medium text-center min-w-max">
+                    <li class="mr-2">
+                        <a href="#all" class="tab-link inline-block p-4 border-b-2 border-primary text-primary rounded-t-lg flex items-center" data-tab="all">
+                            <span>All</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-gray-600">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#gadgets" class="tab-link inline-block p-4 border-b-2 border-transparent text-gray-500 hover:text-gray-600 rounded-t-lg flex items-center" data-tab="gadgets">
+                            <span>Gadgets</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-purple-600">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#mobiles" class="tab-link inline-block p-4 border-b-2 border-transparent text-gray-500 hover:text-gray-600 rounded-t-lg flex items-center" data-tab="mobiles">
+                            <span>Mobiles</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-red-600">
+                                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#laptops" class="tab-link inline-block p-4 border-b-2 border-transparent text-gray-500 hover:text-gray-600 rounded-t-lg flex items-center" data-tab="laptops">
+                            <span>Laptops</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-blue-600">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#wearables" class="tab-link inline-block p-4 border-b-2 border-transparent text-gray-500 hover:text-gray-600 rounded-t-lg flex items-center" data-tab="wearables">
+                            <span>Wearables</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-green-600">
+                                <circle cx="12" cy="12" r="7"></circle>
+                                <polyline points="12 9 12 12 13.5 13.5"></polyline>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="mr-2">
+                        <a href="#news" class="tab-link inline-block p-4 border-b-2 border-transparent text-gray-500 hover:text-gray-600 rounded-t-lg flex items-center" data-tab="news">
+                            <span>News</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-1 text-amber-600">
+                                <path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"></path>
+                                <path d="M18 14h-8"></path>
+                                <path d="M15 18h-5"></path>
+                                <path d="M10 6h8v4h-8V6Z"></path>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Tab Content -->
+            <div id="all" class="tab-content active">
+                <!-- Featured Articles -->
+                <section class="mb-16">
+                    <div class="flex items-center justify-between mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold">Featured Articles</h2>
+                        <a href="#all" class="text-primary font-medium hover:underline tab-link" data-tab="all">
+                            View All
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
+                        <!-- Article 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 md:h-56 w-full overflow-hidden bg-black-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">📱</div>
+                                    <p class="font-medium">Foldable Phones</p>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
+                                    Mobiles
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-6 flex flex-col flex-grow">
+                                <span class="text-sm text-gray-500 mb-2">June 15, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors card-title">
+                                        The Future of Foldable Phones in 2023
+                                    </h3>
+                                </a>
+                                <p class="text-gray-600 mb-4 flex-grow text-sm md:text-base card-text">
+                                    Explore how foldable technology is evolving and what to expect from the next generation of devices.
+                                </p>
+                                <a href="article.html" class="text-primary font-medium flex items-center hover:underline">
+                                    Read More →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 md:h-56 w-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">💻</div>
+                                    <p class="font-medium">Professional Laptops</p>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
+                                    Laptops
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-6 flex flex-col flex-grow">
+                                <span class="text-sm text-gray-500 mb-2">June 10, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors card-title">
+                                        Top 10 Laptops for Professionals
+                                    </h3>
+                                </a>
+                                <p class="text-gray-600 mb-4 flex-grow text-sm md:text-base card-text">
+                                    A comprehensive guide to the best laptops for work, creativity, and productivity in 2023.
+                                </p>
+                                <a href="article.html" class="text-primary font-medium flex items-center hover:underline">
+                                    Read More →
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 md:h-56 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🏠</div>
+                                    <p class="font-medium">Smart Home</p>
+                                </div>
+                                <div class="absolute top-4 left-4 bg-primary text-white text-sm font-medium px-3 py-1 rounded-full">
+                                    Smart Home
+                                </div>
+                            </div>
+                            <div class="p-4 md:p-6 flex flex-col flex-grow">
+                                <span class="text-sm text-gray-500 mb-2">June 5, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg md:text-xl font-bold mb-3 group-hover:text-primary transition-colors card-title">
+                                        Smart Home Devices That Actually Save You Money
+                                    </h3>
+                                </a>
+                                <p class="text-gray-600 mb-4 flex-grow text-sm md:text-base card-text">
+                                    Discover which smart home gadgets can help reduce your utility bills and improve efficiency.
+                                </p>
+                                <a href="article.html" class="text-primary font-medium flex items-center hover:underline">
+                                    Read More →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section class="mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-8">Explore Categories</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+                        <a href="#mobiles" class="group tab-link" data-tab="mobiles">
+                            <div class="relative h-36 md:h-48 rounded-lg overflow-hidden bg-black-600">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue/70 to-transparent z-10 group-hover:from-black-600/70 transition-all duration-300"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-4xl text-white">📱</div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 md:p-4 z-20">
+                                    <h3 class="text-lg md:text-xl font-bold text-white">Mobiles</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#laptops" class="group tab-link" data-tab="laptops">
+                            <div class="relative h-36 md:h-48 rounded-lg overflow-hidden bg-blue-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue/70 to-transparent z-10 group-hover:from-black-600/70 transition-all duration-300"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-4xl text-white">💻</div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 md:p-4 z-20">
+                                    <h3 class="text-lg md:text-xl font-bold text-white">Laptops</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#wearables" class="group tab-link" data-tab="wearables">
+                            <div class="relative h-36 md:h-48 rounded-lg overflow-hidden bg-purple-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue/70 to-transparent z-10 group-hover:from-black-600/70 transition-all duration-300"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-4xl text-white">⌚</div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 md:p-4 z-20">
+                                    <h3 class="text-lg md:text-xl font-bold text-white">Wearables</h3>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#gadgets" class="group tab-link" data-tab="gadgets">
+                            <div class="relative h-36 md:h-48 rounded-lg overflow-hidden bg-green-700">
+                                <div class="absolute inset-0 bg-gradient-to-t from-blue/70 to-transparent z-10 group-hover:from-black-600/70 transition-all duration-300"></div>
+                                <div class="absolute inset-0 flex items-center justify-center">
+                                    <div class="text-4xl text-white">🎮</div>
+                                </div>
+                                <div class="absolute bottom-0 left-0 right-0 p-3 md:p-4 z-20">
+                                    <h3 class="text-lg md:text-xl font-bold text-white">Gadgets</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+                
+                <!-- Latest News Section -->
+                <section class="mb-16">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold">Latest Tech News</h2>
+                        <a href="#news" class="text-primary font-medium hover:underline tab-link" data-tab="news">View All News →</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- News Item 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-blue-50 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🤖</div>
+                                    <p class="font-medium">AI Technology</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-red-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    BREAKING
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">July 15, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        OpenAI Unveils GPT-5 with Unprecedented Multimodal Capabilities
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    The latest AI model from OpenAI demonstrates remarkable improvements in reasoning, visual understanding, and creative content generation, setting new benchmarks in artificial intelligence.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read Full Story
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-amber-50 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🚗</div>
+                                    <p class="font-medium">Electric Vehicles</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    TRENDING
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">July 14, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Tesla Announces Revolutionary New Battery Technology
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    Tesla's new solid-state battery promises 700+ miles of range and a 10-minute charging time, potentially revolutionizing the electric vehicle industry and addressing range anxiety concerns.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read Full Story
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- News Item 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-purple-50 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🌐</div>
+                                    <p class="font-medium">Web Technology</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-green-600 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    NEW
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">July 13, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Web Assembly 2.0 Standard Finalized, Bringing Major Performance Gains
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    The World Wide Web Consortium has finalized the WebAssembly 2.0 standard, introducing garbage collection, improved JavaScript integration, and performance optimizations that could transform web application development.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read Full Story
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Featured Gadgets Section -->
+                <section class="mb-16">
+                    <div class="flex justify-between items-center mb-8">
+                        <h2 class="text-2xl md:text-3xl font-bold">Featured Gadgets</h2>
+                        <a href="#gadgets" class="text-primary font-medium hover:underline tab-link" data-tab="gadgets">View All Gadgets →</a>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Gadget Item 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🎧</div>
+                                    <p class="font-medium">Sony WH-1000XM5</p>
+                                </div>
+                                <div class="absolute top-3 right-3 bg-amber-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    4.9 ★
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs text-gray-500">Headphones</span>
+                                    <span class="text-sm font-bold">$349</span>
+                                </div>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Sony WH-1000XM5 Wireless Headphones
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    Industry-leading noise cancellation with eight microphones and Auto NC Optimizer. Up to 30 hours of battery life with quick charging.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Gadget Item 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">📱</div>
+                                    <p class="font-medium">iPhone 15 Pro</p>
+                                </div>
+                                <div class="absolute top-3 right-3 bg-amber-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    4.8 ★
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs text-gray-500">Smartphone</span>
+                                    <span class="text-sm font-bold">$999</span>
+                                </div>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Apple iPhone 15 Pro (256GB)
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    Featuring the A17 Pro chip, a titanium design, and a 48MP camera system with 5x optical zoom. USB-C connectivity and all-day battery life.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Gadget Item 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">⌚</div>
+                                    <p class="font-medium">Apple Watch Ultra 2</p>
+                                </div>
+                                <div class="absolute top-3 right-3 bg-amber-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    4.7 ★
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs text-gray-500">Smartwatch</span>
+                                    <span class="text-sm font-bold">$799</span>
+                                </div>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Apple Watch Ultra 2 (GPS + Cellular)
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    The most rugged Apple Watch with a titanium case, precision dual-frequency GPS, up to 36 hours of battery life, and advanced health sensors.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Gadget Item 4 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-gray-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🔊</div>
+                                    <p class="font-medium">Sonos Era 300</p>
+                                </div>
+                                <div class="absolute top-3 right-3 bg-amber-500 text-white text-xs font-medium px-2 py-1 rounded-full shadow-sm">
+                                    4.6 ★
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs text-gray-500">Smart Speaker</span>
+                                    <span class="text-sm font-bold">$449</span>
+                                </div>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Sonos Era 300 Spatial Audio Speaker
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-3">
+                                    Revolutionary spatial audio speaker with Dolby Atmos support, six drivers, and voice control. Works with Wi-Fi, Bluetooth, and AirPlay 2.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    View Details
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <!-- Tech Trends Section -->
+                <section class="mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold mb-8">Tech Trends</h2>
+                    <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6 md:p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold mb-4">What's Hot in Tech Right Now</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-red-100 flex items-center justify-center text-red-600 mr-3">
+                                            <span class="text-lg font-bold">1</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">AI-Powered Everything</h4>
+                                            <p class="text-sm text-gray-600">Artificial intelligence is being integrated into every aspect of technology, from smartphones to home appliances.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 mr-3">
+                                            <span class="text-lg font-bold">2</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Spatial Computing</h4>
+                                            <p class="text-sm text-gray-600">Mixed reality headsets like Apple Vision Pro are creating new ways to interact with digital content.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 mr-3">
+                                            <span class="text-lg font-bold">3</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Sustainable Tech</h4>
+                                            <p class="text-sm text-gray-600">Companies are focusing on eco-friendly materials, repairability, and reducing electronic waste.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold mb-4">Upcoming Tech Events</h3>
+                                <ul class="space-y-4">
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded bg-purple-100 flex items-center justify-center text-purple-600 mr-3">
+                                            <span class="text-sm font-bold">AUG<br>15</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Samsung Galaxy Unpacked</h4>
+                                            <p class="text-sm text-gray-600">Samsung's next major product launch event featuring the Galaxy Z Fold 6.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded bg-amber-100 flex items-center justify-center text-amber-600 mr-3">
+                                            <span class="text-sm font-bold">SEP<br>10</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Apple iPhone 16 Event</h4>
+                                            <p class="text-sm text-gray-600">Apple's annual iPhone launch event, expected to reveal the iPhone 16 lineup.</p>
+                                        </div>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded bg-cyan-100 flex items-center justify-center text-cyan-600 mr-3">
+                                            <span class="text-sm font-bold">OCT<br>05</span>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold">Google Pixel Event</h4>
+                                            <p class="text-sm text-gray-600">Google's hardware event showcasing the Pixel 9 series and other new devices.</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Newsletter Section -->
+                <section class="bg-primary rounded-xl p-6 md:p-8 lg:p-12">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
+                        <div class="md:w-1/2">
+                            <h2 class="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">Stay Updated</h2>
+                            <p class="text-white/90 text-base md:text-lg mb-4">
+                                Subscribe to our newsletter to receive the latest tech news, reviews, and exclusive content directly in your inbox.
+                            </p>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <form class="flex flex-col sm:flex-row gap-3">
+                                <input
+                                    type="email"
+                                    placeholder="Your email address"
+                                    class="flex-grow px-4 py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-white w-full"
+                                    required
+                                />
+                                <button type="submit" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-gray-100 w-full sm:w-auto">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            
+            <div id="gadgets" class="tab-content">
+                <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-green-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-6xl text-white/30">🎮</div>
+                    </div>
+                    <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                        <h1 class="text-4xl font-bold text-white mb-4">Cool Gadgets</h1>
+                        <p class="text-lg text-gray-200 max-w-xl">Discover the most innovative and exciting tech gadgets that are changing the way we live, work, and play.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Gadget Item 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🎧</div>
+                                <p class="font-medium">Wireless Earbuds</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 15, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Apple AirPods Pro 2 vs. Sony WF-1000XM4: Which Premium Earbuds Win?
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                We compare the two most popular premium wireless earbuds to help you decide which is right for you.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Gadget Item 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🔊</div>
+                                <p class="font-medium">Smart Speakers</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 12, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    The Best Smart Speakers for Every Room in Your Home
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                From compact bedside companions to powerful living room sound systems, find the perfect smart speaker for each space.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Gadget Item 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🎵</div>
+                                <p class="font-medium">Turntables</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 8, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Modern Turntables: Bringing Vinyl into the Digital Age
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                These new turntables combine the warm sound of vinyl with modern features like Bluetooth connectivity and USB recording.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-6">
+                    <h2 class="text-2xl font-bold mb-6">Gaming Gadgets</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Gaming Gadget 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🎮</div>
+                                    <p class="font-medium">Steam Deck</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Gaming
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 5, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Steam Deck OLED Review: Valve's Handheld Gets Even Better
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    Valve's upgraded Steam Deck features a stunning OLED display and improved battery life, making it the ultimate portable gaming PC.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Gaming Gadget 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🎮</div>
+                                    <p class="font-medium">PS5 Pro</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Gaming
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 2, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        PS5 Pro Rumors: What to Expect from Sony's Mid-Generation Upgrade
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    Everything we know about Sony's rumored PS5 Pro, including potential specs, release date, and price.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Gaming Gadget 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🕹️</div>
+                                    <p class="font-medium">Gaming Accessories</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Gaming
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 28, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        The 7 Best Gaming Controllers for PC Gaming in 2023
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    From Xbox Elite controllers to specialized fight sticks, find the perfect controller for your PC gaming setup.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Smart Home Gadgets</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Smart Home 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">💡</div>
+                                    <p class="font-medium">Smart Lighting</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Smart Home
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 25, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Nanoleaf Lines Review: Modular Lighting That Transforms Your Space
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    These customizable light bars can be arranged in endless configurations to create stunning wall art that reacts to music and games.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Home 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🚪</div>
+                                    <p class="font-medium">Smart Locks</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Smart Home
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 22, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Yale Assure Lock 2 Review: The Perfect Smart Lock for Most Homes
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    Yale's latest smart lock offers fingerprint access, keypad entry, and compatibility with all major smart home platforms.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Smart Home 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🤖</div>
+                                    <p class="font-medium">Robot Vacuums</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Smart Home
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 18, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Roborock S8 Pro Ultra: The Ultimate Self-Cleaning Robot Vacuum
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    This premium robot vacuum and mop combo empties its own dustbin, cleans its own mop, and refills its water tank automatically.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="mobiles" class="tab-content">
+                <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-red-900">
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue/70 to-transparent z-10"></div>
+                    <img src="images/smartphone.svg" alt="Mobile Phones" class="absolute inset-0 w-full h-full object-cover opacity-30">
+                    <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                        <h1 class="text-4xl font-bold text-white mb-4">Mobile Phones</h1>
+                        <p class="text-lg text-gray-200 max-w-xl">Stay updated with the latest smartphones, features, and mobile technology trends.</p>
+                    </div>
+                </div>
+                
+                <!-- Deep green color band for mobile section -->
+                <div class="bg-green-800 text-white py-4 px-6 rounded-lg mb-8 shadow-md">
+                    <div class="container mx-auto">
+                        <h2 class="text-xl md:text-2xl font-bold">Featured Smartphones</h2>
+                        <p class="text-sm md:text-base mt-2 opacity-90">Discover the latest and most innovative smartphones on the market today</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Mobile Item 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-black-100 flex items-center justify-center">
+                            <img src="images/iphone.jpg" alt="iPhone 15 Pro" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Mobiles
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 14, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    iPhone 15 Pro: Everything We Know So Far
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Rumors, leaks, and predictions about Apple's next flagship smartphone.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Item 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-black-100 flex items-center justify-center">
+                            <img src="images/samsung.jpg" alt="Galaxy Z Fold" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Mobiles
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 10, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Samsung Galaxy Z Fold 5 Review
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                A hands-on review of Samsung's latest foldable smartphone and how it compares to previous models.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Item 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-black-100 flex items-center justify-center">
+                            <img src="images/google pixle.jpg" alt="Google Pixel 8" class="w-full h-full object-cover">
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Mobiles
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 8, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Google Pixel 8 Pro: AI Features That Change Everything
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                How Google's latest AI innovations are transforming the smartphone experience on the Pixel 8 Pro.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Mobile Item 4 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-black-100 flex items-center justify-center">
+                        <img src="images/oneplus.jpg" alt="OnePlus 11" class="w-full h-full object-cover">
+                         <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                             Mobiles   
+                            </div>
+                            </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 5, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    OnePlus 11: The Flagship Killer Returns
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                OnePlus returns to its roots with a high-performance, reasonably priced flagship that challenges the big players.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-6">
+                    <!-- Deep green color band for mobile news section -->
+                    <div class="bg-green-800 text-white py-4 px-6 rounded-lg mb-8 shadow-md">
+                        <div class="container mx-auto">
+                            <h2 class="text-xl md:text-2xl font-bold">Latest Mobile News</h2>
+                            <p class="text-sm md:text-base mt-2 opacity-90">Stay updated with the newest developments in mobile technology</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Mobile News 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 3, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Qualcomm Announces Snapdragon 8 Gen 3 Processor
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    The next-generation mobile processor promises 35% faster performance and 40% better power efficiency.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile News 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 1, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Apple Developing Satellite Communication for Emergency Texts
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    Future iPhones may allow users to send emergency messages when outside cellular coverage areas.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Mobile News 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 28, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Under-Display Camera Technology Making Major Strides
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    New advancements in under-display camera technology promise to eliminate the notch while maintaining photo quality.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="laptops" class="tab-content">
+                <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-purple-600">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-6xl text-white/30">💻</div>
+                    </div>
+                    <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                        <h1 class="text-4xl font-bold text-white mb-4">Laptops & Computers</h1>
+                        <p class="text-lg text-gray-200 max-w-xl">Explore the latest laptops, desktops, and computing technology for work and play.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Laptop Item 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">💻</div>
+                                <p class="font-medium">MacBook Pro</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Laptops
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 12, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    MacBook Pro M2 Pro vs M2 Max: Which Should You Buy?
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                We compare Apple's latest professional laptops to help you decide which is right for your workflow.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Laptop Item 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">💻</div>
+                                <p class="font-medium">Gaming Laptops</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Laptops
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 8, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    The Best Gaming Laptops Under $1500 in 2023
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Powerful gaming laptops that won't break the bank, featuring the latest GPUs and high refresh rate displays.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Laptop Item 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">💻</div>
+                                <p class="font-medium">Dell XPS 13</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Laptops
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 5, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Dell XPS 13 Plus Review: Futuristic Design Meets Performance
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Dell's redesigned XPS 13 Plus brings a minimalist aesthetic and powerful performance in an ultra-portable package.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-6">
+                    <h2 class="text-2xl font-bold mb-6">Business Laptops</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Business Laptop 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">💻</div>
+                                    <p class="font-medium">ThinkPad X1 Carbon</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Business
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 2, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Lenovo ThinkPad X1 Carbon Gen 11: The Ultimate Business Laptop
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    The latest iteration of Lenovo's flagship business laptop brings improved performance and security features.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Laptop 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">💻</div>
+                                    <p class="font-medium">HP Elite Dragonfly</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Business
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 30, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        HP Elite Dragonfly G4: Style Meets Substance
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    HP's premium business convertible combines stunning design with enterprise-grade security and performance.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Business Laptop 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-purple-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">💻</div>
+                                    <p class="font-medium">Microsoft Surface</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Business
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 25, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Microsoft Surface Laptop 5: The Perfect Balance
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    Microsoft's latest Surface Laptop offers the perfect balance of performance, battery life, and design for professionals.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Latest Laptop News</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Laptop News 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 1, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Intel Unveils 13th Gen HX Processors for High-Performance Laptops
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    Intel's latest mobile processors bring desktop-class performance to gaming and workstation laptops.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Laptop News 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 28, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        OLED Displays Becoming Standard on Premium Laptops
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    More manufacturers are adopting OLED display technology for their high-end laptops, offering better colors and contrast.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Laptop News 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 22, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Laptop Battery Technology Breakthrough Promises 24-Hour Runtime
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    New silicon-anode battery technology could double laptop battery life without increasing size or weight.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="wearables" class="tab-content">
+                <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-red-600">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-6xl text-white/30">⌚</div>
+                    </div>
+                    <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                        <h1 class="text-4xl font-bold text-white mb-4">Wearable Technology</h1>
+                        <p class="text-lg text-gray-200 max-w-xl">Discover smartwatches, fitness trackers, and other wearable tech that enhance your lifestyle.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Wearable Item 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">⌚</div>
+                                <p class="font-medium">Apple Watch</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Wearables
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 10, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Apple Watch Series 8 vs. Ultra: Which Is Right For You?
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                We compare Apple's latest smartwatches to help you decide which best fits your lifestyle and budget.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Wearable Item 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🏃</div>
+                                <p class="font-medium">Fitness Trackers</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Wearables
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 5, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    The 5 Best Fitness Trackers for Every Type of Athlete
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                From runners to swimmers to weightlifters, find the perfect fitness tracker for your specific workout routine.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Wearable Item 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🥽</div>
+                                <p class="font-medium">Smart Glasses</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Wearables
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 2, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Ray-Ban Meta Smart Glasses: Style Meets Technology
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Meta's collaboration with Ray-Ban brings smart features to classic eyewear designs without sacrificing style.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-6">
+                    <h2 class="text-2xl font-bold mb-6">Health Monitoring Wearables</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Health Wearable 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">❤️</div>
+                                    <p class="font-medium">Oura Ring</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Health
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 30, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Oura Ring Gen 3: The Ultimate Sleep Tracker
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    This discreet smart ring provides detailed sleep analysis and health metrics without the bulk of a smartwatch.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Health Wearable 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🩸</div>
+                                    <p class="font-medium">Continuous Glucose</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Health
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 25, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Continuous Glucose Monitors: Not Just for Diabetics Anymore
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    How CGMs are becoming popular among non-diabetics for optimizing diet, exercise, and metabolic health.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Health Wearable 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="relative h-48 w-full overflow-hidden bg-red-100 flex items-center justify-center">
+                                <div class="text-center p-4">
+                                    <div class="text-3xl mb-2">🫀</div>
+                                    <p class="font-medium">ECG Monitors</p>
+                                </div>
+                                <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                    Health
+                                </div>
+                            </div>
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 20, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Wearable ECG Monitors: The Future of Heart Health
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                    How consumer ECG devices are revolutionizing cardiac monitoring and potentially saving lives.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Latest Wearable News</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Wearable News 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 28, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Samsung Galaxy Ring Prototype Spotted at Tech Conference
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    Samsung appears to be developing a smart ring to compete with Oura, featuring health tracking capabilities.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Wearable News 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 24, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Apple's Mixed Reality Headset Expected to Launch This Fall
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    Apple's long-rumored mixed reality headset is reportedly entering production and could launch by September.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Wearable News 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 18, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        FDA Approves First Smart Watch for Blood Pressure Monitoring
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    A major breakthrough in wearable health tech as the FDA grants approval for cuffless blood pressure monitoring.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="news" class="tab-content">
+                <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-yellow-600">
+                    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="text-6xl text-white/30">📰</div>
+                    </div>
+                    <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                        <h1 class="text-4xl font-bold text-white mb-4">Tech News</h1>
+                        <p class="text-lg text-gray-200 max-w-xl">Stay informed with the latest technology news, industry updates, and product announcements.</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- News Item 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-yellow-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🔍</div>
+                                <p class="font-medium">AI News</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                News
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 15, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Google's New AI Model Can Generate Videos from Text
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                The latest breakthrough in AI technology allows for the creation of realistic videos from simple text descriptions.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-yellow-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🚗</div>
+                                <p class="font-medium">EV News</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                News
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 12, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Tesla Announces New Battery Technology with 500-Mile Range
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                The new battery technology promises to extend the range of electric vehicles and reduce charging times significantly.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- News Item 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-yellow-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🌐</div>
+                                <p class="font-medium">Web Tech</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                News
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 10, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Chrome 115 Introduces New Web APIs for Enhanced Functionality
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Google's latest Chrome update brings powerful new capabilities to web developers and improved performance.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-6">
+                    <h2 class="text-2xl font-bold mb-6">Industry News</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Industry News 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 8, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        Microsoft Acquires AI Security Startup for $2.5 Billion
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    The acquisition aims to bolster Microsoft's cybersecurity offerings with advanced AI threat detection capabilities.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Industry News 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 6, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        EU Passes New Right to Repair Legislation for Electronics
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    New laws will require manufacturers to make devices more repairable and provide spare parts for at least 10 years.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Industry News 3 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-4 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 4, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                        TSMC Begins Construction on New $12 Billion Arizona Chip Factory
+                                    </h3>
+                                </a>
+                                <p class="text-sm text-gray-600 mb-3">
+                                    The semiconductor giant's U.S. expansion marks a significant step in reshoring advanced chip manufacturing.
+                                </p>
+                                <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-10 mb-12">
+                    <h2 class="text-2xl font-bold mb-6">Tech Analysis & Opinion</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Analysis 1 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">June 2, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                                        The Ethical Implications of Generative AI: Where Do We Draw the Line?
+                                    </h3>
+                                </a>
+                                <p class="text-gray-600 mb-4">
+                                    As AI tools like ChatGPT and DALL-E become more powerful, we must confront difficult questions about copyright, authenticity, and the future of creative work.
+                                </p>
+                                <div class="flex items-center mt-auto">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold mr-3">
+                                        JD
+                                    </div>
+                                    <span class="text-sm font-medium">By James Donovan</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Analysis 2 -->
+                        <div class="card group h-full flex flex-col">
+                            <div class="p-6 flex flex-col flex-grow">
+                                <span class="text-xs text-gray-500 mb-1">May 30, 2023</span>
+                                <a href="article.html" class="block">
+                                    <h3 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                                        The Metaverse Pivot: Why Big Tech Is Quietly Shifting Resources to AI
+                                    </h3>
+                                </a>
+                                <p class="text-gray-600 mb-4">
+                                    After billions in investment, major tech companies are scaling back metaverse projects in favor of AI development. What does this mean for the future of immersive technology?
+                                </p>
+                                <div class="flex items-center mt-auto">
+                                    <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-700 font-bold mr-3">
+                                        SL
+                                    </div>
+                                    <span class="text-sm font-medium">By Sarah Lee</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-blue-800 text-white py-8 md:py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tech Mafia</h3>
+                    <p class="text-gray-300 mb-4">
+                        Your trusted source for the latest technology news, reviews, and guides.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <!-- X (formerly Twitter) icon -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <!-- Instagram icon -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <!-- LinkedIn icon -->
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#gadgets" class="text-gray-300 hover:text-white tab-link" data-tab="gadgets">
+                                Gadgets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#mobiles" class="text-gray-300 hover:text-white tab-link" data-tab="mobiles">
+                                Mobiles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#laptops" class="text-gray-300 hover:text-white tab-link" data-tab="laptops">
+                                Laptops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#wearables" class="text-gray-300 hover:text-white tab-link" data-tab="wearables">
+                                Wearables
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to our newsletter for the latest tech updates.
+                    </p>
+                    <form class="flex flex-col space-y-2">
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            class="px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary w-full"
+                            required
+                        />
+                        <button type="submit" class="btn btn-primary w-full">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p class="text-white text-lg font-medium">&copy; 2025 SKP (SANSKAR PROGRAMMING). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = {
+                toggle: document.querySelector('.menu-toggle'),
+                close: document.querySelector('.menu-close'),
+                menu: document.querySelector('.mobile-menu'),
+                links: document.querySelectorAll('.mobile-menu .tab-link')
+            };
+            
+            if (elements.toggle && elements.close && elements.menu) {
+                // Helper function to toggle menu state
+                const toggleMenu = (isOpen) => {
+                    elements.menu.classList[isOpen ? 'add' : 'remove']('active');
+                    document.body.style.overflow = isOpen ? 'hidden' : '';
+                };
+                
+                // Event listeners
+                elements.toggle.addEventListener('click', () => toggleMenu(true));
+                elements.close.addEventListener('click', () => toggleMenu(false));
+                elements.links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+            }
+        });
+    </script>
+</body>
+</html> 

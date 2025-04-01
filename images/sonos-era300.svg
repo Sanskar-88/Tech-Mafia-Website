@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Sonos Era 300 Speaker -->
+  <defs>
+    <linearGradient id="speakerGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="50%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#222222" />
+    </linearGradient>
+    <radialGradient id="speakerGrille" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#444444" />
+      <stop offset="100%" stop-color="#333333" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Speaker Body -->
+  <path d="M100,80 L300,80 C330,80 350,100 350,130 L350,200 C350,230 330,250 300,250 L100,250 C70,250 50,230 50,200 L50,130 C50,100 70,80 100,80 Z" fill="url(#speakerGradient)" stroke="#444444" stroke-width="2" />
+  
+  <!-- Speaker Curve -->
+  <path d="M100,80 C150,50 250,50 300,80" fill="none" stroke="#444444" stroke-width="2" />
+  <path d="M100,250 C150,280 250,280 300,250" fill="none" stroke="#444444" stroke-width="2" />
+  
+  <!-- Speaker Grilles -->
+  <ellipse cx="120" cy="130" rx="30" ry="30" fill="url(#speakerGrille)" stroke="#444444" stroke-width="1" />
+  <ellipse cx="200" cy="130" rx="40" ry="40" fill="url(#speakerGrille)" stroke="#444444" stroke-width="1" />
+  <ellipse cx="280" cy="130" rx="30" ry="30" fill="url(#speakerGrille)" stroke="#444444" stroke-width="1" />
+  <ellipse cx="200" cy="200" rx="40" ry="30" fill="url(#speakerGrille)" stroke="#444444" stroke-width="1" />
+  
+  <!-- Control Panel -->
+  <rect x="170" y="80" width="60" height="10" rx="5" ry="5" fill="#111111" stroke="#444444" stroke-width="1" />
+  
+  <!-- Control Buttons -->
+  <circle cx="185" cy="85" r="3" fill="#ffffff" />
+  <circle cx="200" cy="85" r="3" fill="#ffffff" />
+  <circle cx="215" cy="85" r="3" fill="#ffffff" />
+  
+  <!-- Sonos Logo -->
+  <text x="200" y="230" font-family="Arial" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">SONOS</text>
+  
+  <!-- Product Name -->
+  <text x="200" y="280" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Sonos Era 300</text>
+  <text x="200" y="300" font-family="Arial" font-size="12" fill="#888888" text-anchor="middle">Spatial Audio with Dolby Atmos</text>
+</svg> 

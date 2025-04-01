@@ -1,0 +1,21 @@
+{
+  "name": "tech-mafia",
+  "version": "1.0.0",
+  "description": "Tech Mafia - Latest Tech News, Reviews & Guides",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "npx serve",
+    "build": "echo No build step required for static HTML"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.19"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+} 

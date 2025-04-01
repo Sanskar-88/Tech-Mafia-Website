@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Gadgets - Tech Mafia</title>
+    <meta name="title" content="Gadgets - Tech Mafia">
+    <meta name="description" content="Discover the coolest tech gadgets and innovative devices. From smart home tech to audio gear, cameras, and unique accessories - find reviews, comparisons, and buying guides for the latest gadgets.">
+    <meta name="keywords" content="tech gadgets, smart home devices, audio gadgets, cameras, drones, innovative tech, gadget reviews, cool tech">
+    <meta name="author" content="Tech Mafia">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.techmafia.com/gadgets.html">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.techmafia.com/gadgets.html">
+    <meta property="og:title" content="Gadgets - Tech Mafia">
+    <meta property="og:description" content="Discover the coolest tech gadgets and innovative devices. From smart home tech to audio gear, cameras, and unique accessories - find reviews, comparisons, and buying guides for the latest gadgets.">
+    <meta property="og:image" content="https://www.techmafia.com/gadgets-image.jpg">
+    
+    <!-- X (formerly Twitter) Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.techmafia.com/gadgets.html">
+    <meta name="twitter:title" content="Gadgets - Tech Mafia">
+    <meta name="twitter:description" content="Discover the coolest tech gadgets and innovative devices. From smart home tech to audio gear, cameras, and unique accessories - find reviews, comparisons, and buying guides for the latest gadgets.">
+    <meta name="twitter:image" content="https://www.techmafia.com/gadgets-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    
+    <!-- Stylesheets -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #0070f3;
+            --secondary-color: #6c757d;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+            --accent-color: #ff5722;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark-color);
+            background-color: var(--light-color);
+        }
+        .container-custom {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        .btn {
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #0051a8;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .text-primary {
+            color: var(--primary-color);
+        }
+        .bg-primary {
+            background-color: var(--primary-color);
+        }
+        
+        /* Navigation link hover effects */
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+        
+        .nav-link:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+    </style>
+</head>
+<body>
+    <header class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+        <div class="container-custom py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="text-2xl font-bold text-primary flex items-center">
+                    <img src="favicon.svg" alt="Tech Mafia Logo" class="w-8 h-8 mr-2" />
+                    Tech Mafia
+                </a>
+                
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-6">
+                        <li>
+                            <a href="index.html" class="font-medium nav-link">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gadgets.html" class="font-medium nav-link text-primary">
+                                Gadgets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" class="font-medium nav-link">
+                                Mobiles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="laptops.html" class="font-medium nav-link">
+                                Laptops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="wearables.html" class="font-medium nav-link">
+                                Wearables
+                            </a>
+                        </li>
+                        <li>
+                            <a href="news.html" class="font-medium nav-link">
+                                News
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="md:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-primary hidden md:block">Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="min-h-screen pt-16">
+        <div class="container-custom py-8">
+            <div class="relative h-64 rounded-xl overflow-hidden mb-8 bg-green-700">
+                <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent z-10"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-6xl text-white/30">🎮</div>
+                </div>
+                <div class="absolute inset-0 z-20 flex flex-col justify-center p-8">
+                    <h1 class="text-4xl font-bold text-white mb-4">Cool Gadgets</h1>
+                    <p class="text-lg text-gray-200 max-w-xl">Discover the most innovative and exciting tech gadgets that are changing the way we live, work, and play.</p>
+                </div>
+            </div>
+            
+            <!-- Featured Gadget -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden mb-12">
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 bg-green-100 flex items-center justify-center p-12">
+                        <div class="text-center">
+                            <div class="text-7xl mb-4">🎧</div>
+                            <p class="text-xl font-medium">Sony WH-1000XM5</p>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded mb-4">Featured Gadget</span>
+                        <h2 class="text-2xl font-bold mb-4">Sony WH-1000XM5: The New King of Noise Cancellation</h2>
+                        <p class="text-gray-600 mb-6">
+                            Sony's latest flagship headphones take noise cancellation to a whole new level with improved microphones, a new processor, and enhanced comfort for all-day listening.
+                        </p>
+                        <div class="flex flex-wrap gap-4 mb-6">
+                            <div class="flex items-center">
+                                <span class="font-bold mr-2">Battery:</span>
+                                <span>30 hours</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold mr-2">Price:</span>
+                                <span>$399</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="font-bold mr-2">Rating:</span>
+                                <span class="text-yellow-400">★★★★★</span>
+                            </div>
+                        </div>
+                        <a href="article.html" class="btn btn-primary inline-block">Read Full Review</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gadget Categories -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6">Browse by Category</h2>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <a href="#audio" class="group">
+                        <div class="relative h-40 rounded-lg overflow-hidden bg-blue-600">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 group-hover:from-blue-600/70 transition-all duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-4xl text-white">🎧</div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 z-20">
+                                <h3 class="text-lg font-bold text-white">Audio</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#smart-home" class="group">
+                        <div class="relative h-40 rounded-lg overflow-hidden bg-green-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 group-hover:from-green-600/70 transition-all duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-4xl text-white">🏠</div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 z-20">
+                                <h3 class="text-lg font-bold text-white">Smart Home</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#gaming" class="group">
+                        <div class="relative h-40 rounded-lg overflow-hidden bg-purple-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 group-hover:from-purple-600/70 transition-all duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-4xl text-white">🎮</div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 z-20">
+                                <h3 class="text-lg font-bold text-white">Gaming</h3>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#cameras" class="group">
+                        <div class="relative h-40 rounded-lg overflow-hidden bg-red-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10 group-hover:from-red-600/70 transition-all duration-300"></div>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-4xl text-white">📷</div>
+                            </div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4 z-20">
+                                <h3 class="text-lg font-bold text-white">Cameras</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Audio Gadgets -->
+            <section id="audio" class="mb-12">
+                <div class="flex items-center mb-6">
+                    <h2 class="text-2xl font-bold">Audio Gadgets</h2>
+                    <div class="ml-4 h-px bg-gray-300 flex-grow"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Audio Gadget 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🎧</div>
+                                <p class="font-medium">Wireless Earbuds</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 15, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Apple AirPods Pro 2 vs. Sony WF-1000XM4: Which Premium Earbuds Win?
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                We compare the two most popular premium wireless earbuds to help you decide which is right for you.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Gadget 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🔊</div>
+                                <p class="font-medium">Smart Speakers</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 12, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    The Best Smart Speakers for Every Room in Your Home
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                From compact bedside companions to powerful living room sound systems, find the perfect smart speaker for each space.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Audio Gadget 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-blue-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🎵</div>
+                                <p class="font-medium">Turntables</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Audio
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 8, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Modern Turntables: Bringing Vinyl into the Digital Age
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                These new turntables combine the warm sound of vinyl with modern features like Bluetooth connectivity and USB recording.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Smart Home Gadgets -->
+            <section id="smart-home" class="mb-12">
+                <div class="flex items-center mb-6">
+                    <h2 class="text-2xl font-bold">Smart Home Gadgets</h2>
+                    <div class="ml-4 h-px bg-gray-300 flex-grow"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Smart Home Gadget 1 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">💡</div>
+                                <p class="font-medium">Smart Lighting</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Smart Home
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 10, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    Philips Hue vs. LIFX vs. Nanoleaf: Smart Lighting Showdown
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                We compare the top smart lighting systems to help you choose the best option for your home.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Smart Home Gadget 2 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🚪</div>
+                                <p class="font-medium">Smart Locks</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Smart Home
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 7, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    The 5 Best Smart Locks for Enhanced Home Security
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Upgrade your home security with these top-rated smart locks that offer keyless entry, remote access, and more.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Smart Home Gadget 3 -->
+                    <div class="card group h-full flex flex-col">
+                        <div class="relative h-48 w-full overflow-hidden bg-green-100 flex items-center justify-center">
+                            <div class="text-center p-4">
+                                <div class="text-3xl mb-2">🌡️</div>
+                                <p class="font-medium">Smart Thermostats</p>
+                            </div>
+                            <div class="absolute top-3 left-3 bg-primary text-white text-sm font-medium px-3 py-1.5 rounded-full shadow-sm">
+                                Smart Home
+                            </div>
+                        </div>
+                        <div class="p-4 flex flex-col flex-grow">
+                            <span class="text-xs text-gray-500 mb-1">June 5, 2023</span>
+                            <a href="article.html" class="block">
+                                <h3 class="text-lg font-bold mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+                                    How Smart Thermostats Can Cut Your Energy Bills by 23%
+                                </h3>
+                            </a>
+                            <p class="text-sm text-gray-600 mb-3 line-clamp-2">
+                                Our long-term test reveals how much you can actually save with a smart thermostat, and which models deliver the best ROI.
+                            </p>
+                            <a href="article.html" class="text-primary text-sm font-medium mt-auto hover:underline">
+                                Read More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container-custom">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tech Mafia</h3>
+                    <p class="text-gray-300 mb-4">
+                        Your trusted source for the latest technology news, reviews, and guides.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-gray-300 hover:text-white">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07a4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Categories</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="gadgets.html" class="text-primary hover:text-white">
+                                Gadgets
+                            </a>
+                        </li>
+                        <li>
+                            <a href="category.html" class="text-gray-300 hover:text-white">
+                                Mobiles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="laptops.html" class="text-gray-300 hover:text-white">
+                                Laptops
+                            </a>
+                        </li>
+                        <li>
+                            <a href="wearables.html" class="text-gray-300 hover:text-white">
+                                Wearables
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Contact
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-300 hover:text-white">
+                                Terms of Service
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">
+                        Subscribe to our newsletter for the latest tech updates.
+                    </p>
+                    <form class="flex flex-col space-y-2">
+                        <input
+                            type="email"
+                            placeholder="Your email address"
+                            class="px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+                            required
+                        />
+                        <button type="submit" class="btn btn-primary">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p class="text-white text-lg font-medium">&copy; 2025 SKP (SANSKAR PROGRAMMING). All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Mafia - Local Launcher</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        h1 {
+            color: #0070f3;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #0070f3;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #0051a8;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="favicon.svg" alt="Tech Mafia Logo" class="logo">
+        <h1>Tech Mafia Website</h1>
+        <p>Welcome to the Tech Mafia website local launcher. Click the button below to open the website.</p>
+        <p><strong>Note:</strong> For the best experience, it's recommended to use a local server. This direct method may have some limitations with certain features.</p>
+        <a href="index.html" class="btn">Launch Website</a>
+        <div class="note">
+            <p>If you have Python installed, you can run a local server with:</p>
+            <code>python -m http.server 8000</code>
+            <p>or</p>
+            <code>py -m http.server 8000</code>
+        </div>
+    </div>
+</body>
+</html> 

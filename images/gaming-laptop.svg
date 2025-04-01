@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" viewBox="0 0 500 300">
+  <!-- Gaming Laptop -->
+  <defs>
+    <linearGradient id="laptopGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#222222" />
+      <stop offset="50%" stop-color="#333333" />
+      <stop offset="100%" stop-color="#222222" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color "#111111" />
+    </linearGradient>
+    <linearGradient id="keyboardGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#222222" />
+    </linearGradient>
+    <linearGradient id="rgbGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff0000" />
+      <stop offset="33%" stop-color="#00ff00" />
+      <stop offset="66%" stop-color="#0000ff" />
+      <stop offset="100%" stop-color="#ff0000" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Base -->
+  <rect x="100" y="200" width="300" height="20" rx="3" ry="3" fill="url(#laptopGradient)" />
+  <path d="M80,220 L420,220 L440,250 L60,250 Z" fill="url(#laptopGradient)" />
+  
+  <!-- RGB Light Strip on Base -->
+  <rect x="90" y="220" width="320" height="3" fill="url(#rgbGradient)" />
+  
+  <!-- Screen Housing -->
+  <rect x="100" y="50" width="300" height="150" rx="5" ry="5" fill="url(#laptopGradient)" />
+  
+  <!-- Screen -->
+  <rect x="110" y="60" width="280" height="130" rx="2" ry="2" fill="#000000" />
+  
+  <!-- Game Scene (Simplified) -->
+  <rect x="110" y="60" width="280" height="130" fill="#0a1a2a" />
+  
+  <!-- Game Environment Elements -->
+  <rect x="110" y="150" width="280" height="40" fill="#1a3a2a" /> <!-- Ground -->
+  <circle cx="250" cy="100" r="20" fill="#ff3a2a" /> <!-- Game Character/Element -->
+  <rect x="150" y="130" width="10" height="20" fill="#3a3a3a" /> <!-- Obstacle -->
+  <rect x="200" y="140" width="15" height="10" fill="#3a3a3a" /> <!-- Obstacle -->
+  <rect x="300" y="120" width="20" height="30" fill="#3a3a3a" /> <!-- Obstacle -->
+  <path d="M110,60 L150,90 L190,70 L230,100 L270,80 L310,110 L350,90 L390,60" fill="none" stroke="#2a5a7a" stroke-width="2" /> <!-- Terrain Outline -->
+  
+  <!-- Game HUD Elements -->
+  <rect x="120" y="70" width="50" height="5" fill="#ff5a2a" /> <!-- Health Bar -->
+  <rect x="120" y="80" width="30" height="5" fill="#2a5aff" /> <!-- Mana/Energy Bar -->
+  <circle cx="350" cy="80" r="10" fill="none" stroke="#ffffff" stroke-width="1" /> <!-- Radar/Map -->
+  <text x="350" y="83" font-family="Arial" font-size="6" fill="#ffffff" text-anchor="middle">MAP</text>
+  
+  <!-- Keyboard Area -->
+  <rect x="110" y="200" width="280" height="15" rx="2" ry="2" fill="url(#keyboardGradient)" />
+  
+  <!-- RGB Keyboard Lighting (Simplified) -->
+  <rect x="120" y="205" width="260" height="5" fill="url(#rgbGradient)" opacity="0.5" />
+  
+  <!-- Trackpad -->
+  <rect x="200" y="207" width="100" height="6" rx="3" ry="3" fill="#111111" stroke="#333333" stroke-width="0.5" />
+  
+  <!-- Vents -->
+  <rect x="120" y="215" width="40" height="3" rx="1" ry="1" fill="#111111" />
+  <rect x="340" y="215" width="40" height="3" rx="1" ry="1" fill="#111111" />
+  
+  <!-- Product Name -->
+  <text x="250" y="270" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Gaming Laptop</text>
+  <text x="250" y="290" font-family="Arial" font-size="12" fill="#ff5a2a" text-anchor="middle">RTX 4080 | Intel Core i9 | 32GB RAM</text>
+</svg> 

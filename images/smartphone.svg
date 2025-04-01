@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="600" viewBox="0 0 300 600">
+  <!-- Smartphone -->
+  <defs>
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a1a" />
+      <stop offset="100%" stop-color="#2a2a2a" />
+    </linearGradient>
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#000000" />
+      <stop offset="100%" stop-color="#111111" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Phone Body -->
+  <rect x="50" y="50" width="200" height="500" rx="30" ry="30" fill="url(#phoneGradient)" stroke="#333333" stroke-width="2" />
+  
+  <!-- Screen -->
+  <rect x="60" y="60" width="180" height="480" rx="25" ry="25" fill="url(#screenGradient)" />
+  
+  <!-- Dynamic Island -->
+  <rect x="110" y="70" width="80" height="25" rx="12.5" ry="12.5" fill="#000000" />
+  
+  <!-- Camera System -->
+  <circle cx="85" cy="85" r="12" fill="#000000" stroke="#333333" stroke-width="1" />
+  <circle cx="85" cy="85" r="5" fill="#1a1a1a" />
+  <circle cx="85" cy="85" r="2" fill="#666666" />
+  
+  <!-- UI Elements -->
+  <rect x="80" y="120" width="140" height="60" rx="10" ry="10" fill="#222222" />
+  <text x="150" y="155" font-family="Arial" font-size="14" fill="#ffffff" text-anchor="middle">Latest Updates</text>
+  <text x="150" y="170" font-family="Arial" font-size="10" fill="#888888" text-anchor="middle">Swipe for more</text>
+  
+  <!-- App Grid -->
+  <rect x="80" y="200" width="60" height="60" rx="15" ry="15" fill="#3366cc" />
+  <rect x="160" y="200" width="60" height="60" rx="15" ry="15" fill="#cc3366" />
+  <rect x="80" y="280" width="60" height="60" rx="15" ry="15" fill="#66cc33" />
+  <rect x="160" y="280" width="60" height="60" rx="15" ry="15" fill="#cc6633" />
+  
+  <!-- Bottom Bar -->
+  <rect x="90" y="500" width="120" height="5" rx="2.5" ry="2.5" fill="#ffffff" />
+  
+  <!-- Product Name -->
+  <text x="150" y="570" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">Pro Smartphone</text>
+  <text x="150" y="590" font-family="Arial" font-size="12" fill="#888888" text-anchor="middle">Next-Gen Performance</text>
+</svg> 
